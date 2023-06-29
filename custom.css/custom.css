@@ -1,11 +1,18 @@
-<!-- all additional css for SBA Project -- >
-<style>
+/* Additional css for the theme added by Kimson Pomento */
 
+footer.site-footer {
+    background-color: #023047;
+}
 
+h5.footer__title {
+    color: white;
+}
 
+.site-footer li a {
+    color: white!important;
+}
 
+.site-footer p {
+    color: white!important;
+}
 
-
-
-
-</style>
