@@ -1,2 +1,13 @@
 /* Additional css for the theme added by Kimson Pomento */
 
+/* CSS for Slideshow Section */
+
+span {
+    color: #CC4800;
+} /* added from custom css */
+
+#shopify-section-template--19768630739257__16289212707c98911d .page-width {
+    padding: 0;
+} /* added from theme css file */
+
+
