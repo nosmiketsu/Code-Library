@@ -75,6 +75,11 @@ p {
     }
 } /* added yet */
 
+#shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .information-container .heading {
+    font-size: 40px !important;
+    font-weight: 800 !important;
+} /* added from theme css file */
+
 
 @media (max-width: 400px) {
     #shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .information-container .heading {
@@ -96,11 +101,15 @@ p {
 /* CSS for second Image With Text - End*/
 
 
-/* CSS for Featured Collection */
+/* CSS for Featured Collection - Start */
+
+h2 {
+    font-weight: 600 !important;
+}
 
 .collection {
     max-width: 100%!important;
-    margin: 0 50px!important;
+    margin: 0 !important;
 } /* added from section custom css */
 
 @media screen and (min-width: 992px) {
@@ -122,3 +131,43 @@ p {
         font-weight: 800 !important;
     }
   } /* added from base css file */
+
+  .card-information .card-information__text {
+    font-weight: 600;
+    line-height: 25px;
+    font-size: 19px;
+    padding: 0 10px !important;
+  } 
+
+@media (max-width: 543px) {
+    .card-information .card-information__text {
+        line-height: 19px !important;
+        padding: 0 10px !important;
+        font-weight: 600 !important;
+        font-size: 12px !important;
+    }  
+}  
+
+.card-wrapper {
+    border: 1px solid #000;
+}
+
+.card-information {
+    border-bottom: 1px solid #000;
+}
+
+/* CSS for Featured Collection - End */  
+
+
+/* CSS for Judge Me App Section - Start */  
+
+.jdgm-carousel-title-and-link {
+    margin-top: -33px;
+    font-size: 20px !important;
+}
+
+.jdgm-carousel-title {
+    display: none !important;
+}
+
+/* CSS for Judge Me App Section - End */  
