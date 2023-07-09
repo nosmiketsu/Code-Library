@@ -1,5 +1,19 @@
 /* Additional css for the theme added by Kimson Pomento */
 
+
+/* CSS for HOMEPAGE - Start */
+
+/* CSS for Header Search bar - Start */
+
+input.search-header__input.search__input {
+    border: 1px solid #000000 !important;
+    border-radius: 20px;
+    color: #000000 !important;
+    padding-left: 20px !important;
+}
+
+/* CSS for Header Search bar - End */
+
 /* CSS for Slideshow Section */
 
 span {
@@ -171,3 +185,78 @@ h2 {
 }
 
 /* CSS for Judge Me App Section - End */  
+
+
+/* CSS for HOMEPAGE - END */
+
+/* CSS for COLLECTION PAGE - Start */
+
+#SortBy {
+    background-color: #CC4800 !important;
+    font-size: 20px !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff !important;
+} /* added from section custom css */
+
+svg.icon.icon-caret {
+    color: #ffffff;
+  } /* added from section custom css */
+
+h2.facets__heading.sidebar-title {
+    background-color: #CC4800;
+    color: #fff !important;
+    font-size: 20px !important;
+    font-weight: 800;
+} /* added from section custom css */
+
+.facets__disclosure {
+    border: 1px solid #000 !important;
+} /* added from section custom css */
+
+.card-wrapper {
+    border: 1px solid #000;
+} /* added from section custom css */
+
+.card-information {
+    border-bottom: 1px solid #000;
+} /* added from section custom css */
+
+.card-information-bottom {
+    text-align: center;
+} /* added from section custom css */
+
+.thumbnail-buttons .btn-info {
+    margin: 20px 3px !important;
+} /* added from section custom css */
+
+s.price-item.price-item--regular {
+    font-weight: 800;
+} /* added from section custom css */
+
+span.price-item.price-item--sale {
+    font-weight: 800;
+} /* added from section custom css */
+
+span.price-item.price-item--regular {
+    font-weight: 800;
+} /* added from section custom css */
+
+.price {
+    display: block !important;
+} /* added from section custom css */
+
+.collection-title {
+    text-align: center !important;
+    font-weight: 800 !important;
+} /* added from section custom css */
+
+/* CSS for COLLECTION PAGE - END */
+
+/* CSS for PRODUCT PAGE - START */
+
+.collection {
+    max-width: 100%!important;
+    margin: 0 !important;
+    padding: 0 !important;
+} /* added from section custom css */
