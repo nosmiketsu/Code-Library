@@ -22,7 +22,7 @@ span {
 
 #shopify-section-template--19768630739257__16289212707c98911d .page-width {
     padding: 0;
-} /* added from theme css file */
+} /* added from theme.css file */
 
 
 
@@ -31,11 +31,11 @@ span {
 
 #shopify-section-template--19768630739257__056bb9d4-c0e0-4bda-aad2-61c697ffde60 {
     padding: 10px 0;
-} /* added from theme css file */
+} /* added from theme.css file */
 
 #shopify-section-template--19768630739257__056bb9d4-c0e0-4bda-aad2-61c697ffde60 .page-width {
     max-width: 1980px!important;
-} /* added from theme css file */
+} /* added from theme.css file */
 
 @media (min-width: 768px) {
     #shopify-section-template--19768630739257__056bb9d4-c0e0-4bda-aad2-61c697ffde60 .row {
@@ -48,7 +48,7 @@ span {
 #shopify-section-template--19768630739257__056bb9d4-c0e0-4bda-aad2-61c697ffde60 .information-container .heading {
     font-size: 40px !important;
     font-weight: 800 !important;
-} /* added from theme css file */
+} /* added from theme.css file */
 
 
 /* mobile css */
@@ -59,7 +59,7 @@ span {
         font-weight: 800 !important;
         text-align: center;
     }
-} /* added from theme css file */
+} /* added from theme.css file */
 
 .rte p {
     font-size: 30px!important;
@@ -76,11 +76,11 @@ p {
 
 #shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 {
     padding: 10px 0;
-} /* added from theme css file */
+} /* added from theme.css file */
 
 #shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .page-width {
     max-width: 1980px!important;
-} /* added from theme css file */
+} /* added from theme.css file */
 
 @media (min-width: 768px) {
     #shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .row {
@@ -92,7 +92,7 @@ p {
 #shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .information-container .heading {
     font-size: 40px !important;
     font-weight: 800 !important;
-} /* added from theme css file */
+} /* added from theme.css file */
 
 
 @media (max-width: 400px) {
@@ -101,7 +101,7 @@ p {
         font-weight: 800 !important;
         text-align: center;
     }
-} /* added from theme css file */
+} /* added from theme.css file */
 
 
 .rte p {
@@ -130,14 +130,14 @@ h2 {
     .rich-text__blocks {
       max-width: 83rem; /* original 78rem */
     }
-  } /* added from base css file */
+  } /* added from base.css file */
 
 @media only screen and (min-width: 768px) {
     .h1 {
         font-size: 39px !important;
         font-weight: 800 !important;
     }
-  } /* added from base css file */
+  } /* added from base.css file */
 
 @media only screen and (max-width: 767px) {
     .h1 {
@@ -251,6 +251,14 @@ span.price-item.price-item--regular {
     font-weight: 800 !important;
 } /* added from section custom css */
 
+.col-lg-3.col-md-12.col-sm-12.col-xs-12.normal-sidebar.sidebar_content {
+    display: none;
+} /* added from theme.css liquid file */
+
+.col-lg-9 {
+    width: 100%;
+} /* Modify thru base.css liquid file I added ccs comment tag as well */
+
 /* CSS for COLLECTION PAGE - END */
 
 /* CSS for PRODUCT PAGE - START */
@@ -260,3 +268,4 @@ span.price-item.price-item--regular {
     margin: 0 !important;
     padding: 0 !important;
 } /* added from section custom css */
+
