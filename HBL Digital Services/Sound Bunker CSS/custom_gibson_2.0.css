@@ -26,6 +26,20 @@ span {
 
 
 
+/* CSS for Rich Text - Start */
+.rich-text {
+    margin-top: 0rem !important;
+    margin-bottom: 0rem !important;
+  }
+  
+.rich-text {
+    width: calc(100% - 0rem) !important;
+}
+
+.rich-text__blocks {
+    width: calc(100% - 0rem) !important;
+}
+
 /* CSS for first Image With Text - Start */
 
 
@@ -46,28 +60,40 @@ span {
 
 
 #shopify-section-template--19768630739257__056bb9d4-c0e0-4bda-aad2-61c697ffde60 .information-container .heading {
-    font-size: 40px !important;
-    font-weight: 800 !important;
+    font-size: 35px !important;
+    font-weight: 600 !important;
 } /* added from theme.css file */
 
+
+#shopify-section-template--19768630739257__056bb9d4-c0e0-4bda-aad2-61c697ffde60 .rte p {
+    font-size: 30px!important;
+    text-align: right !important;
+    line-height: 42px !important;
+} /* added from theme.css file */
 
 /* mobile css */
 
-@media (max-width: 400px) {
-    #shopify-section-template--19768630739257__056bb9d4-c0e0-4bda-aad2-61c697ffde60 .information-container .heading {
-        font-size: 27px !important;
-        font-weight: 800 !important;
-        text-align: center;
+@media (max-width: 991px) {
+    #shopify-section-template--19768630739257__056bb9d4-c0e0-4bda-aad2-61c697ffde60  .information-container .heading {
+        font-size: 22px !important;
+        font-weight: 600 !important;
+        text-align: center !important;
     }
 } /* added from theme.css file */
 
-.rte p {
-    font-size: 30px!important;
-} /* added from section custom css */
+@media (max-width: 991px) {
+    #shopify-section-template--19768630739257__056bb9d4-c0e0-4bda-aad2-61c697ffde60  .about-btn {
+        text-align: center !important;
+    }
+} /* added from theme.css file */
 
-p {
-    line-height: 42px !important;
-} /* added from section custom css */
+@media (max-width: 991px) {
+    #shopify-section-template--19768630739257__056bb9d4-c0e0-4bda-aad2-61c697ffde60  .rte p  {
+        font-size: 20px !important;
+        text-align: center !important;
+    }
+} /* added from theme.css file */
+
 
 /* CSS for first Image With Text - End */
 
@@ -90,27 +116,47 @@ p {
 } /* added yet */
 
 #shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .information-container .heading {
-    font-size: 40px !important;
-    font-weight: 800 !important;
+    font-size: 35px !important;
+    font-weight: 600 !important;
+    text-align: right !important;
 } /* added from theme.css file */
 
 
-@media (max-width: 400px) {
+
+#shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .rte p {
+    font-size: 30px!important;
+    text-align: right !important;
+    line-height: 42px !important;
+} /* added from theme.css file */
+
+#shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .about-btn {
+    text-align: right !important;
+} /* added from theme.css file */
+
+
+/* mobile */
+
+@media (max-width: 991px) {
     #shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .information-container .heading {
-        font-size: 27px !important;
-        font-weight: 800 !important;
-        text-align: center;
+        font-size: 22px !important;
+        font-weight: 600 !important;
+        text-align: center !important;
     }
 } /* added from theme.css file */
 
+@media (max-width: 991px) {
+    #shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .about-btn {
+        text-align: center !important;
+    }
+} /* added from theme.css file */
 
-.rte p {
-    font-size: 30px!important;
-} /* added from section custom css */
+@media (max-width: 991px) {
+    #shopify-section-template--19768630739257__b913c334-3100-48a8-9ae2-a2828df8c545 .rte p  {
+        font-size: 20px !important;
+        text-align: center !important;
+    }
+} /* added from theme.css file */
 
-p {
-    line-height: 42px !important;
-} /* added from section custom css */
 
 /* CSS for second Image With Text - End*/
 
@@ -135,14 +181,14 @@ h2 {
 @media only screen and (min-width: 768px) {
     .h1 {
         font-size: 39px !important;
-        font-weight: 800 !important;
+        font-weight: 600 !important;
     }
   } /* added from base.css file */
 
 @media only screen and (max-width: 767px) {
     .h1 {
         font-size: 19px !important;
-        font-weight: 800 !important;
+        font-weight: 600 !important;
     }
   } /* added from base css file */
 
@@ -163,12 +209,24 @@ h2 {
 }  
 
 .card-wrapper {
-    border: 1px solid #000;
+    border: 0 !important;
+    border-radius: 0 !important;
 }
 
 .card-information {
-    border-bottom: 1px solid #000;
+    border-radius: 0 !important;
+    border-bottom: none !important;
+    background: none !important;
 }
+
+.card-information-bottom {
+    text-align: center !important;
+}
+
+
+
+
+
 
 /* CSS for Featured Collection - End */  
 
@@ -185,6 +243,24 @@ h2 {
 }
 
 /* CSS for Judge Me App Section - End */  
+
+/* CSS for Video Section - Start */
+
+#shopify-section-template--19768630739257__5ad4f53d-5a22-4bd0-882f-9063c76040f7 {
+    background-color: #C94A22;
+    padding: 20px 0px !important;
+}
+
+h2 {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+.service-title {
+    color: #ffffff !important;
+}
+
+/* CSS for Video Section - End */
 
 
 /* CSS for HOMEPAGE - END */
@@ -248,7 +324,7 @@ span.price-item.price-item--regular {
 
 .collection-title {
     text-align: center !important;
-    font-weight: 800 !important;
+    font-weight: 00 !important;
 } /* added from section custom css */
 
 .col-lg-3.col-md-12.col-sm-12.col-xs-12.normal-sidebar.sidebar_content {
@@ -268,5 +344,3 @@ span.price-item.price-item--regular {
     margin: 0 !important;
     padding: 0 !important;
 } /* added from section custom css */
-
-testing... testing
