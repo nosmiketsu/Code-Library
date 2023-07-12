@@ -3,6 +3,66 @@
 
 /* CSS for HOMEPAGE - Start */
 
+/* CSS for Slideshow  - Start */
+
+/* Fort Knox Hero Banner */
+
+@media (min-width: 768px) {
+    #shopify-section-template--19768630739257__16289212707c98911d .col-md-5 {
+        width: 53.666667% !important;
+    }
+}
+
+@media (min-width: 768px) {
+    #shopify-section-template--19768630739257__16289212707c98911d .ishislider .ishislideshow-carousel .slider-content .main-title {
+        font-size: 50px !important;
+    }
+}
+
+/* mobile */
+
+@media (max-width: 543px) {
+    #shopify-section-template--19768630739257__16289212707c98911d .col-xs-6 {
+        width: 100% !important;
+    }
+} 
+
+@media (max-width: 543px) {
+    #shopify-section-template--19768630739257__16289212707c98911d .ishislider .ishislideshow-carousel .slider-content .main-title {
+        font-size: 20px !important;
+        line-height: 25px !important;
+    }
+}
+
+
+.slider-btn.btn {
+    font-weight: 800 !important;
+}
+
+/* ECODefend Hero Banner  */
+
+@media (min-width: 768px) {
+    #shopify-section-template--19768630739257__59486393-eadf-4bfd-b3c1-da4b690382d3 .col-md-5 {
+        width: 53.666667% !important;
+    }
+} /* added from base.css file */
+
+@media (max-width: 543px) {
+    #shopify-section-template--19768630739257__59486393-eadf-4bfd-b3c1-da4b690382d3 .col-xs-6 {
+        width: 100% !important;
+    }
+} /* added from base.css file */
+
+
+.ishislider .ishislideshow-carousel .slider-content .sub-title {
+    font-size: 20px !important;
+} /* added from custom css of section */
+
+/* CSS for Slideshow  - End */
+
+
+
+
 /* CSS for Header Search bar - Start */
 
 input.search-header__input.search__input {
@@ -335,6 +395,24 @@ span.price-item.price-item--regular {
     width: 100%;
 } /* Modify thru base.css liquid file I added ccs comment tag as well */
 
+#shopify-section-template--19768630608185__product-grid .card-wrapper {
+    border: 0 !important;
+    border-radius: 0 !important;
+} /* added from theme.css liquid file */
+
+#shopify-section-template--19768630608185__product-grid .card-information {
+    border-radius: 0 !important;
+    border-bottom: none !important;
+    background: none !important;
+} /* added from theme.css liquid file */
+
+#shopify-section-template--19768630608185__product-grid .card-information-bottom {
+    text-align: center !important;
+} /* added from theme.css liquid file */
+
+
+
+
 /* CSS for COLLECTION PAGE - END */
 
 /* CSS for PRODUCT PAGE - START */
@@ -344,3 +422,5 @@ span.price-item.price-item--regular {
     margin: 0 !important;
     padding: 0 !important;
 } /* added from section custom css */
+
+
