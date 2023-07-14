@@ -13,11 +13,15 @@
 
   a.btn.klaviyo-bis-trigger:hover {
     color: #fff;
-    background-color: #000000;
+    background-color: #53391d;
     transition: all ease 0.25s;
   }
 </style>
 
-<!-- Klaviyo Back in Stock Start -->
-{% include 'klaviyo-bis-trigger' %}
-<!-- Klaviyo Back in Stock Start -->
+{% comment %}
+    put this where do you want to place the BIS CTA somewhere in the Product Page. Ideally Below the ATC Button
+
+  <!-- BIS Klaviyo CTA Trigger - start -->
+    {% include 'klaviyo-bis-trigger' %}
+  <!-- BIS Klaviyo CTA Trigger - end -->
+{% endcomment %}
