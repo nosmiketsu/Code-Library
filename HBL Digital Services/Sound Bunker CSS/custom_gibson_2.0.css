@@ -453,5 +453,33 @@ input.search-header__input.search__input {
     }
 }
 
+/* to be added later on */
+
+input.search-header__input.search__input::placeholder {
+    animation: blink-text 1.9s linear infinite;
+    color: #000 !important;
+    font-weight: 800 !important;
+    text-align: center !important;    
+}
+
+@keyframes blink-text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+input.search-header__input.search__input:focus::placeholder {
+    animation: none;
+    color: #000 !important;
+    font-weight: 800 !important;
+    text-align: center !important;    
+}
+
 /* Additional Code to blink the placeholder of Search Bar - Added by Kimson Pomento end */
 
