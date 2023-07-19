@@ -281,11 +281,16 @@ h2 {
 
 .card-information-bottom {
     text-align: center !important;
+    background: #cc4800;
 }
 
+span {
+    color: #fff !important
+}
 
-
-
+s {
+    color: #fff !important;
+}
 
 
 /* CSS for Featured Collection - End */  
@@ -300,6 +305,10 @@ h2 {
 
 .jdgm-carousel-title {
     display: none !important;
+}
+
+.jdgm-carousel-item__product {
+    height: 50% !important;
 }
 
 /* CSS for Judge Me App Section - End */  
@@ -423,5 +432,26 @@ span.price-item.price-item--regular {
     padding: 0 !important;
 } /* added from section custom css */
 
+/* Additional Code to blink the placeholder of Search Bar - Added by Kimson Pomento start */
 
-Search your pool pump? for search bar 
+input.search-header__input.search__input {
+    animation: blink-text 1.9s linear infinite;
+    color: #000 !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+}
+
+@keyframes blink-text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Additional Code to blink the placeholder of Search Bar - Added by Kimson Pomento end */
+
