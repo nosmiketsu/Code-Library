@@ -223,7 +223,7 @@
             {%- case block.type %}
               {%- when 'heading' -%}
                 <div class="link-list">
-                  <a href="">&#10132; &nbsp; {{ block.settings.toc_list }}</a>
+                  <a href="{{ block.settings.toc_link }}">&#10132; &nbsp; {{ block.settings.toc_list }}</a>
                 </div>
             {%- endcase %}
           {% endfor %}
@@ -233,7 +233,7 @@
           <div class="inner-content-box">
             {% case block.type %}
               {% when 'header' %}
-                <h2>{{ block.settings.header_content }}</h2>
+                <h2 id="{{ block.settings.header_content_id }}">{{ block.settings.header_content }}</h2>
               {% when 'paragraph' %}
                 <p>{{ block.settings.paragraph_content }}</p>
             {% endcase %}
@@ -332,7 +332,7 @@
         {
           "type": "url",
           "id": "link",
-          "label": "url"
+          "label": "Url"
         }
       ]
     },
@@ -348,8 +348,8 @@
         },
         {
           "type": "url",
-          "id": "link",
-          "label": "url"
+          "id": "toc_link",
+          "label": "Url"
         }
       ]
     },
@@ -362,6 +362,11 @@
           "id": "header_content",
           "label": "Header Content",
           "default": "Header Content"
+        },
+        {
+          "type": "text",
+          "id": "header_content_id",
+          "label": "Header Id"
         }
       ]
     },
