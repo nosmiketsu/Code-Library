@@ -214,7 +214,7 @@
       <div class="articles-content">
         <h1>{{ section.settings.title_blog }}</h1>
         <p>By {{ section.settings.author_name }}</p>
-        <img class="top-image" src="{{ section.settings.image }}">
+        <img class="top-image" src="{{ section.settings.image | image_url: width: 730 }}">
         <!-- Table Content Part start -->
         <div class="tabel-of-content">
           <h3>{{ section.settings.toc }}</h3>
@@ -245,7 +245,7 @@
         <!-- Author Part Start -->
         <div class="inner-author-box">
           <div class="author-box-img">
-            <img src="{{ section.settings.author_pic }}">
+            <img src="{{ section.settings.author_pic | image_url: width: 230 }}">
             <div class="author-box-name">
               <div class="author-name">
                 <h3>{{ section.settings.author_name }}</h3>
