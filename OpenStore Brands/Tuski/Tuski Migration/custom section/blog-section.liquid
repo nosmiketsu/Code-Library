@@ -1,11 +1,5 @@
-<!--
-  Main template for Section Liquid by Kimson Pomento
-  {%- render 'breadcrumb',
-    container: 'compact',
-    vertical_space: 'vertical-space-xsmall',
-    style: 'breadcrumb-main--margin'
-  -%}
--->
+<!-- Main template for Section Liquid by Kimson Pomento -->
+
 <style>
     /* Add your CSS styling here */
   .container {
@@ -49,7 +43,7 @@
   .articles-content>p {
   color: #000;
   font-weight: 400;
-  text-transform: capitalize;
+  text-transform: inherit;
   display: inline-block;
   vertical-align: top;
   width: 100%;
@@ -198,6 +192,9 @@
 </style>
 <div class="container">
   <div class="row">
+    <!--
+      {%- render 'breadcrumb', container: 'compact', vertical_space: 'vertical-space-xsmall', style: 'breadcrumb-main--margin' -%}
+    -->
     <div class="column" id="linkList">
       <ul class="sidebar-sticky">
         {%- for block in section.blocks -%}
