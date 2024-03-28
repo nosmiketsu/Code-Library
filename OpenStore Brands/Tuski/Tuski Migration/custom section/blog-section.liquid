@@ -196,6 +196,7 @@
       {%- render 'breadcrumb', container: 'compact', vertical_space: 'vertical-space-xsmall', style: 'breadcrumb-main--margin' -%}
     -->
     <div class="column" id="linkList">
+      <!-- Sidebar Part start -->
       <ul class="sidebar-sticky">
         {%- for block in section.blocks -%}
           {%- case block.type %}
@@ -205,15 +206,16 @@
               </li>
           {%- endcase %}
         {% endfor %}
-        <!-- main block section part -->
       </ul>
     </div>
+    <!-- Sidebar Part end -->
+    <!-- main blog section part start -->
     <div class="column" id="blogPost">
       <div class="articles-content">
         <h1>{{ section.settings.title_blog }}</h1>
         <p>By {{ section.settings.author_name }}</p>
         <img class="top-image" src="{{ section.settings.image }}">
-        <!-- Table Content Part -->
+        <!-- Table Content Part start -->
         <div class="tabel-of-content">
           <h3>{{ section.settings.toc }}</h3>
           {%- for block in section.blocks -%}
@@ -225,6 +227,8 @@
             {%- endcase %}
           {% endfor %}
         </div>
+        <!-- Table Content Part end -->
+        <!-- Article Part Start -->
         {{ section.settings.article_content }}
         {% for block in section.blocks %}
           <div class="inner-content-box">
@@ -236,8 +240,9 @@
             {% endcase %}
           </div>
         {% endfor %}
-
+        <!-- Article Part End -->
         <hr>
+        <!-- Author Part Start -->
         <div class="inner-author-box">
           <div class="author-box-img">
             <img src="{{ section.settings.author_pic }}">
@@ -254,6 +259,8 @@
           <div class="author-box-text">
             {{ section.settings.author_text }}
           </div>
+          <!-- Author Part end -->
+          <!-- main blog section part end -->
         </div>
       </div>
     </div>
