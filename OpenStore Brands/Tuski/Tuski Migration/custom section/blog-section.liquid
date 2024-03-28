@@ -1,123 +1,386 @@
-<!-- Main template by Kimson Pomento -->
+<!--
+  Main template for Section Liquid by Kimson Pomento
+  {%- render 'breadcrumb',
+    container: 'compact',
+    vertical_space: 'vertical-space-xsmall',
+    style: 'breadcrumb-main--margin'
+  -%}
+-->
+<style>
+    /* Add your CSS styling here */
+  .container {
+  width: 100%;
+  padding: 0 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1160px;
+  }
 
-<div class="row">
-  <div class="column" id="linkList">
-    <ul>
-      <li class="sidebar"><a href="">Do Water Flossers Work</a></li>
-      <!-- main block section part -->
-      <li class="sidebar"><a href="">Do Water Flossers Work</a></li>
-      <li class="sidebar"><a href="">Do Water Flossers Work</a></li>
-      <li class="sidebar"><a href="">Do Water Flossers Work</a></li>
-      <li class="sidebar"><a href="">Do Water Flossers Work</a></li>
-    </ul>
-  </div>
-  <div class="column" id="blogPost">
-    <div class="blog-main">
-      <h1 class="blog-header">WHAT IS A WATER FLOSSER</h1>
-      <h4>By Tim Gordon</h4>
-      <img src="https://tuski.co/cdn/shop/files/What_is_a_Water_Flosser_x800.png?v=1658215045">
-      <!-- Table Content Part -->
-      <h2>Table of Contents</h2>
-      <ul class="tablecontent" id="tablecontent">
-        <li class="table-list">&#10132; &nbsp; Types of Water Flossers</li>
+  .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  }
+  .column {
+  flex: 1;
+  padding: 20px;
+  }
+
+  div#blogPost {
+  max-width: 66.666667%;
+  flex: 66.666667%;
+  }
+
+  .articles-content {
+  padding-left: 15px;
+  }
+
+  .articles-content h1 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  text-transform: uppercase;
+  }
+  .articles-content>p {
+  color: #000;
+  font-weight: 400;
+  text-transform: capitalize;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  font-size: 18px;
+  padding-bottom: 10px;
+  }
+  .articles-content a {
+    color: blue;
+    text-decoration: underline;
+    }
+  .articles-content .top-image {
+  max-height: 370px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 30px;
+  }
+  .tabel-of-content {
+  background: #e7f7f0;
+  padding: 25px 40px 20px;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 30px;
+  border: 1px solid #bad3c8;
+  }
+
+  .tabel-of-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  }
+
+  * sidebar css here */
+
+  /* Display list items horizontally */
+  #linkList ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  text-decoration: none;
+  }
+
+  .tabel-of-content .link-list a {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  font-size: 15px;
+  color: #333;
+  position: relative;
+  padding: 0 0 0 23px;
+  text-decoration: none;
+  }
+
+  .inner-content-box {
+  margin-bottom: 0px;
+  }
+
+  .inner-content-box h2 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.2;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 30px;
+  background: #f4f4f4;
+  padding: 20px;
+  }
+
+  /* sidebar css here */
+
+
+  .sidebar-sticky {
+  position: sticky;
+  top: 50px;
+  }
+
+  .sidebar-blog a {
+  color: black;
+  }
+
+  #linkList li {
+  padding: 15px 0px;
+  border-bottom: 1px solid #dddddd;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  }
+
+  div#linkList {
+  max-width: 33.333%;
+  flex: 0 0 33.333333%;
+  }
+
+  /* Author css part style here */
+
+  .inner-author-box {
+  padding-top: 50px;
+  border-top: 1px solid #efefef;
+  }
+
+  .inner-author-box .author-box-img {
+  display: flex;
+  align-items: center !important;
+  margin-bottom: 5px;
+  }
+
+  .inner-author-box .author-box-img > img {
+  width: 100%;
+  max-width: 100px;
+  padding-right: 20px;
+  }
+
+  .author-box-img .author-box-name {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content; space-between;
+  width: 100%;
+  }
+
+  .author-box-img .publish-date {
+  margin-left: auto;
+  color: #707070;
+  padding-left: 10px;
+  font-size: 15px;
+  }
+  .inner-author-box .author-box-text {
+  width: 100%;
+  padding-left: 100px;
+  }
+
+  .inner-author-box .author-box-img .author-box-name h3 {
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  }
+
+  .author-name p {
+  font-size: 15px;
+  }
+</style>
+<div class="container">
+  <div class="row">
+    <div class="column" id="linkList">
+      <ul class="sidebar-sticky">
+        {%- for block in section.blocks -%}
+          {%- case block.type %}
+            {%- when 'text' -%}
+              <li class="sidebar-blog">
+                <a href="{{ block.settings.link }}">{{ block.settings.sidebar_text }}</a>
+              </li>
+          {%- endcase %}
+        {% endfor %}
         <!-- main block section part -->
-        <li class="table-list">&#10132; &nbsp; Types of Water Flossers</li>
-        <li class="table-list">&#10132; &nbsp; Types of Water Flossers</li>
-        <li class="table-list">&#10132; &nbsp; Types of Water Flossers</li>
-        <li class="table-list">&#10132; &nbsp; Types of Water Flossers</li>
       </ul>
-      <p>
-        A water flosser is a handheld oral care device important in teeth care. It is also known as an oral irrigator.
-        This device produces a stream of water that goes between the teeth. The jet of water seeks to remove food
-        debris, plaque and bacteria lodged in the teeth. A water flosser works hand in hand with daily flossing to
-        enhance your daily oral care routine. There are several water flosser benefits associated with water flossing.
-        This article explores the key points you need to know about water flossers.
-      </p>
-      <h2 class="content-title">Types of Water Flossers</h2>
-      <p>
-        There are different types of water flossers available in the market today. You should consider your needs and
-        specific water flosser features before making a choice. Some of these features are flosser size, pressure, and
-        type. Adequate knowledge about these will help you choose the right water flosser. The four types of water
-        flossers are:
-      </p>
-      <h2 class="content-title">Water Flosser Benefits</h2>
-      <p>
-        You can't go wrong by making water flossing part of your regular hygiene. To help you learn more, highlighted
-        below are the benefits of water flossing:
-      </p>
-      <h2 class="content-title">Who Should Consider a Water Flosser?</h2>
-      <p>
-        Everyone should include water flossing in their oral routine. This is because its advantages can’t be
-        overemphasized. There are certain conditions where a water flosser can prove to be an effective tool.
-        Highlighted below are some of these conditions:
-      </p>
-      <h2 class="content-title">Water Flosser FAQs</h2>
-      <p>
-        Do doctors approve of water flossers? Water flossing has been approved by the American Dental Association, ADA.
-        It supplements oral health hygiene to remove food particles from the teeth.
-      </p>
-      <hr>
-      <div class="author-row">
-        <div class="column-author">
-          <img src="https://tuski.co/cdn/shop/files/author-img_x800.png?v=1657017170" class="author-img">
+    </div>
+    <div class="column" id="blogPost">
+      <div class="articles-content">
+        <h1>{{ section.settings.title_blog }}</h1>
+        <p>By {{ section.settings.author_name }}</p>
+        <img class="top-image" src="{{ section.settings.image }}">
+        <!-- Table Content Part -->
+        <div class="tabel-of-content">
+          <h3>{{ section.settings.toc }}</h3>
+          {%- for block in section.blocks -%}
+            {%- case block.type %}
+              {%- when 'heading' -%}
+                <div class="link-list">
+                  <a href="">&#10132; &nbsp; {{ block.settings.toc_list }}</a>
+                </div>
+            {%- endcase %}
+          {% endfor %}
         </div>
-        <div class="column-author">
-          <h4>Tim Gordon</h4>
-          <h5>Writer</h5>
-          <p>
-            Tim Gordon is a Chicago-based content writer and editor with 10+ years of experience in technical writing.
-            Tim works closely with both B2C and B2B businesses to help them produce high-quality yet easy-to-digest
-            professional content that provides value to users and educates them. Throughout his career, Tim has crafted
-            blog posts, help guides, white papers, and user manuals in personal care, dental hygiene, wellness, patient
-            education, and more.
-          </p>
+        {{ section.settings.article_content }}
+        {% for block in section.blocks %}
+          <div class="inner-content-box">
+            {% case block.type %}
+              {% when 'header' %}
+                <h2>{{ block.settings.header_content }}</h2>
+              {% when 'paragraph' %}
+                <p>{{ block.settings.paragraph_content }}</p>
+            {% endcase %}
+          </div>
+        {% endfor %}
+
+        <hr>
+        <div class="inner-author-box">
+          <div class="author-box-img">
+            <img src="{{ section.settings.author_pic }}">
+            <div class="author-box-name">
+              <div class="author-name">
+                <h3>{{ section.settings.author_name }}</h3>
+                <p>{{ section.settings.position }}</p>
+              </div>
+              <div class="publish-date">
+                <span class="date"> {{ section.settings.published_date }} </span>
+              </div>
+            </div>
+          </div>
+          <div class="author-box-text">
+            {{ section.settings.author_text }}
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<style>
-  /* Add your CSS styling here */
-  .row {
-    display: flex;
-  }
-  .column {
-    flex: 1;
-    padding: 20px;
-  }
-
-  /* Display list items horizontally */
-  #linkList ul {
-    list-style: underline;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  #tablecontent li {
-    text-decoration: none !important;
-    list-style-type: none;
-  }
-
-  /* sidebar css here */
-
-  .sidebar a {
-    color: black;
-  }
-
-  #linkList li {
-    list-style-type: none;
-    text-decoration: underline;
-  }
-
-  /* Author css part style here */
-
-  .author-row {
-    display: flex;
-  }
-  .column-author {
-    flex: 1;
-    padding: 20px;
-  }
-</style>
+{% schema %}
+{
+  "name": "Blog Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title_blog",
+      "label": "Page Title",
+      "default": "MAIN TITLE HERE"
+    },
+    {
+      "type": "text",
+      "id": "author_name",
+      "label": "Author Name",
+      "default": "Author"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Top Image"
+    },
+    {
+      "type": "header",
+      "content": "Table of Content"
+    },
+    {
+      "type": "text",
+      "id": "toc",
+      "label": "Header"
+    },
+    {
+      "type": "richtext",
+      "id": "article_content",
+      "label": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "author_pic",
+      "label": "Author Picture"
+    },
+    {
+      "type": "text",
+      "id": "published_date",
+      "label": "Published Date"
+    },
+    {
+      "type": "text",
+      "id": "position",
+      "label": "Position/Job"
+    },
+    {
+      "type": "richtext",
+      "id": "author_text",
+      "label": "Short Description here..."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Sidebar List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "sidebar_text",
+          "label": "Header",
+          "default": "Sidebar Menu Here"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "url"
+        }
+      ]
+    },
+    {
+      "type": "heading",
+      "name": "TOC List",
+      "settings": [
+        {
+          "type": "text",
+          "id": "toc_list",
+          "label": "Table Of Content List",
+          "default": "Table of Content List here"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "url"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "name": "Header Content",
+      "settings": [
+        {
+          "type": "text",
+          "id": "header_content",
+          "label": "Header Content",
+          "default": "Header Content"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "name": "Paragraph Content",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "paragraph_content",
+          "label": "Paragraph Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Blog Section"
+    }
+  ]
+}
+{% endschema %}
