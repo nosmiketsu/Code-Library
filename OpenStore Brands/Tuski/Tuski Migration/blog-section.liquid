@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="column" id="linkList">
+    <ul>
+      <!-- Links will be generated here -->
+    </ul>
+  </div>
+  <div class="column" id="blogPost">
+    <!-- Blog post content will be displayed here -->
+  </div>
+</div>
+<style>
+  /* Add your CSS styling here */
+  .row {
+    display: flex;
+  }
+  .column {
+    flex: 1;
+    padding: 20px;
+  }
+  #linkList {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    font-size: 1.1rem;
+    margin: 2px 2px;
+  }
+
+  /* Display list items horizontally */
+  #linkList ul {
+    list-style: underline;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  #linkList li {
+    display: none;
+  }
+  .hide {
+    display: none;
+  }
+  .show:focus + .hide {
+    display: block;
+  }
+</style>
