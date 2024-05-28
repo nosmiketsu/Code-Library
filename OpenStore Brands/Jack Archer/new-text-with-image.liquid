@@ -1,0 +1,420 @@
+<section
+  id="{% if section.settings.content_subtitle == 'What’s included?' %}hero-section{% else %}other-sections{% endif %}"
+  class="newTextWithImage Container"
+>
+  {% if section.settings.title != blank %}
+    <h2 class="newTextWithImage__title">{{ section.settings.title }}</h2>
+  {% endif %}
+  {% if section.settings.subtitle != blank %}
+    <p class="newTextWithImage__subtitle">{{ section.settings.subtitle }}</p>
+  {% endif %}
+
+  {%- capture section_image -%}
+      <div class="newTextWithImage__ImageWrapper">
+        <img src="{{ section.settings.image | img_url: 'grande' }}" alt="{{ section.settings.image.alt }}">
+      </div>
+    {%- endcapture -%}
+
+  {%- capture section_content -%}
+       <div class="newTextWithImage__ConetentWrapper">
+        {% if section.settings.reviews != blank %}
+        <div class="reviewsWrapper">  4.9  <img class="" src="{{ 'stars.svg' | asset_url }}"> <p class="reviews">{{ section.settings.reviews }}</p></div>
+        {% endif %}
+        {% if section.settings.content_title != blank %}
+        <h2 class="content_title">{{ section.settings.content_title }}</h2>
+        {% endif %}
+        {% if section.settings.content_subtitle != blank %}
+        <p class="content_subtitle">{{ section.settings.content_subtitle }}</p>
+        {% endif %}
+        {% if section.settings.content_description != blank %}
+        <p class="content_description">{{ section.settings.content_description }}</p>
+       {% endif %}
+        <ul class="newTextWithImage__list">
+        {% for block in section.blocks %}
+          <li class="newTextWithImage__item">
+            
+            <img src="{{ block.settings.list_item_image | img_url }}" alt="{{ block.settings.image.alt }}">
+            
+            {% if block.settings.list_item_description != blank %}
+            <div class="newTextWithImage__description">{{ block.settings.list_item_description }}</div>
+            {% endif %}
+          </li>
+        {% endfor %}
+       </ul>
+        <div class="newTextWithImage__ButtonWrapper"> 
+          <div class="buttonsWrapper">
+            {% if section.settings.content_button_text != blank %}
+              <a href="#byo-section" class="Button button-small-red">{{ section.settings.content_button_text }}</a>
+              {% endif %}
+              {% comment %} {% if section.settings.content_subtitle == 'What’s included?' %}
+              <button  class="Button button-small-red sizeBtn">what’s my size?</button>
+              {% endif %} {% endcomment %}
+          </div>
+          {% if section.settings.content_button_description != blank %}
+          <p class="button_description">{{ section.settings.content_button_description }}</p>
+          {% endif %}
+       </div>
+      </div>
+    {%- endcapture -%}
+
+  <div class="newTextWithImage__content {% unless section.settings.image_position == 'left' %} left {% endunless %}">
+    {%- if section.settings.image_position == 'left' -%}
+      {{- section_image -}}
+      {{- section_content -}}
+    {%- else -%}
+      {{- section_content -}}
+      {{- section_image -}}
+    {%- endif -%}
+  </div>
+</section>
+
+<style>
+    .newTextWithImage__subtitle {
+      display: none;
+    }
+    .buttonsWrapper {
+      display: flex;
+      gap: 1rem;
+    }
+    .sizeBtn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      {% comment %} padding: 15px 24px 7px; {% endcomment %}
+      gap: 4px;
+      width: 196px;
+      height: 50px;
+      background: #F9F9FA;
+      border: 1px solid #D31334;
+      border-radius: 5px;
+      color: #D31334;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+    }
+    #hero-section .newTextWithImage__list {
+      max-width: 433px;
+    }
+    #other-sections .newTextWithImage__list {
+      max-height: 554px;
+    }
+    .newTextWithImage__title {
+      font-family: 'Calibre';
+      font-weight: 600;
+      font-size: 53px;
+      line-height: 64px;
+      text-align: center;
+    }
+
+    .reviewsWrapper {
+      display: flex;
+      align-items: center;
+    }
+    .reviewsWrapper img{
+      width: 100px;
+      height: auto;
+      margin: 0 3px;
+    }
+    .newTextWithImage {
+      background: white;
+      margin-top: 2rem;
+      margin-bottom: 4.5rem;
+    }
+    .newTextWithImage a {
+      width: fit-content;
+    }
+    .newTextWithImage .content_title {
+      text-align: left;
+      font-family: 'Calibre';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 53px;
+    }
+    .newTextWithImage > p{
+      text-align: center;
+    }
+    .newTextWithImage__content {
+      width: 100%;
+      display: flex;
+      margin-top: 2rem;
+      gap: 4rem;
+      max-height: 554px;
+       }
+    .newTextWithImage__ConetentWrapper,
+    .newTextWithImage__ImageWrapper {
+      flex: 50%;
+    }
+    .newTextWithImage__ImageWrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      aspect-ratio: 1/1;
+  }
+    .newTextWithImage__ConetentWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      gap: 0.5rem
+    }
+    .newTextWithImage__ConetentWrapper > p.reviews {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+    .newTextWithImage__ConetentWrapper > h2 {
+      font-weight: 600;
+      font-size: 60px;
+      line-height: 100%;
+      color: #1D1D1F;
+    }
+    .newTextWithImage__ConetentWrapper > p.content_subtitle {
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 90%;
+      color: #1D1D1F;
+      margin: 1rem 0;
+    }
+
+    .newTextWithImage__ConetentWrapper > p.content_description {
+      font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    }
+
+    .newTextWithImage__ConetentWrapper ul li {
+      list-style: none;
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 26px;
+      margin: 17px 0;
+    }
+    .newTextWithImage__ButtonWrapper {
+      width: fit-content;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .newTextWithImage__ButtonWrapper a {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 208px;
+      height: 50px;
+    }
+    .newTextWithImage__ButtonWrapper  .button_description {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    @media only screen and (max-width: 768px) {
+      .newTextWithImage__subtitle {
+        max-width: 343px;
+        margin: 0 auto;
+        margin-top: 1rem;
+        display: block;
+      }
+      .newTextWithImage__ConetentWrapper {
+        gap: 1rem;
+    }
+      div.buttonsWrapper > * {
+        min-width: 170px;
+        max-width: 210px;
+        height: 50px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 20px;
+      }
+      .newTextWithImage__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center;
+        color: #000000;
+        max-width: 343px;
+        margin: 0 auto;
+      }
+      .newTextWithImage__ButtonWrapper {
+        display: flex;
+        flex-direction : column;
+        width: 100%;
+        justify-content: center;
+        margin-top: 0;
+      }
+      .newTextWithImage__title {
+        font-weight: 600 !important;
+        font-size: 32px !important;
+        line-height: 38px !important;
+        text-align: center;
+      }
+      .newTextWithImage .content_title{
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        text-align: left;
+        width: 343px;
+      }
+      .newTextWithImage__ConetentWrapper > p.content_subtitle {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 90%;
+    }
+    .newTextWithImage__content.left {
+      flex-direction: column-reverse;
+    }
+      .newTextWithImage__content {
+        flex-direction: column;
+        gap: 1.5rem;
+        max-height: none;
+      }
+      .newTextWithImage > h2{
+        font-weight: 600;
+        font-size: 53px;
+        line-height: 64px;
+      }
+      .newTextWithImage__ConetentWrapper > p.reviews {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+      }
+      .newTextWithImage__ConetentWrapper > h2 {
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 100%;
+      }
+      .newTextWithImage__ConetentWrapper > p.content_subtitle {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 90%;
+      }
+      .newTextWithImage__ConetentWrapper > p.content_description {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 26px;
+      }
+
+      .newTextWithImage__ConetentWrapper ul li {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .newTextWithImage__ButtonWrapper a {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 20px;
+      align-self: center;
+  }
+      .newTextWithImage__ButtonWrapper  .button_description {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      .reviewsWrapper {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+</style>
+
+{% schema %}
+{
+  "name": "New Text With Image",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle"
+    },
+    {
+      "id": "image",
+      "type": "image_picker",
+      "label": "Image"
+    },
+    {
+      "id": "reviews_image",
+      "type": "image_picker",
+      "label": "Reviews Image"
+    },
+    {
+      "type": "text",
+      "id": "reviews",
+      "label": "Reviews"
+    },
+    {
+      "type": "text",
+      "id": "content_title",
+      "label": "Content Title"
+    },
+    {
+      "type": "text",
+      "id": "content_subtitle",
+      "label": "Content Subtitle"
+    },
+    {
+      "type": "text",
+      "id": "content_description",
+      "label": "Content Description"
+    },
+    {
+      "type": "text",
+      "id": "content_button_text",
+      "label": "Content Button Text"
+    },
+    {
+      "type": "text",
+      "id": "content_button_description",
+      "label": "Content Button Description"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "list_item",
+      "name": "List Item",
+      "settings": [
+        {
+          "id": "list_item_image",
+          "type": "image_picker",
+          "label": "Lis Item Image"
+        },
+        {
+          "id": "list_item_description",
+          "type": "richtext",
+          "label": "Item Decription"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
