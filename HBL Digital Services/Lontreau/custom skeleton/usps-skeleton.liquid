@@ -1,0 +1,43 @@
+<!-- This liquid file is just skelenton for new block of Product Section -->
+
+<style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    /* Create two equal columns that floats next to each other */
+    .column-img {
+      float: left;
+      width: 33.33%;
+      padding: 10px 15px
+    }
+    
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column {
+        width: 100%;
+      }
+    }
+    </style>
+    </head>
+    <body>
+    
+    <div class="row">
+      <div class="column-img">
+        <img src="https://cdn.shopify.com/s/files/1/0637/7737/4458/files/image_5.png?v=1716896465" width="80px;" height="78px;">
+      </div>
+      <div class="column-img">
+        <img src="https://cdn.shopify.com/s/files/1/0637/7737/4458/files/image_5.png?v=1716896465" width="80px;" height="78px;">
+      </div>
+      <div class="column-img">
+        <img src="https://cdn.shopify.com/s/files/1/0637/7737/4458/files/image_5.png?v=1716896465" width="80px;" height="78px;">
+      </div>
+    </div>
+    
