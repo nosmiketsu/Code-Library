@@ -1,70 +1,50 @@
 <!-- This liquid file is the final liquid for new block of Product Section -->
 
 <style>
-    * {
-      box-sizing: border-box;
-    }
-    
-    /* Create two equal columns that floats next to each other */
-    .column-img {
-      float: left;
-      width: 33.33%;
-      padding: 10px 15px
-    }
-    /* Clear floats after the columns */
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    
-    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .column {
-        width: 100%;
-      }
-    }
-    </style>
+  * {
+    box-sizing: border-box;
+  }
 
-    </head>
-    <body>
+  /* Create two equal columns that floats next to each other */
+  .column-img-usps {
+    float: left;
+    width: 100%;
+    padding: 10px 15px;
+  }
+  /* Clear floats after the columns */
+  .row-usps:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
 
-    <div class="row">
-      <div class="column-img column">
-        <img src="{{block.settings.icon-image-1 | img_url:'master' }}" width="158px;" height="16px;">
-      </div>
-      <div class="column-img column">
-        <img src="{{block.settings.icon-image-2 | img_url:'master' }}" width="158px;" height="16px;">
-      </div>
-      <div class="column-img column">
-        <img src="{{block.settings.icon-image-3 | img_url:'master' }}" width="158px;" height="16px;">
-      </div>
-    </div>
-
-<!-- Schema added to the main-product-1.liquid line 97 -->
-{{% schema %}
-  {
-    {
-      "name": "usps",
-      "type": "image",
-      "settings": [
-        {
-          "id": "icon-image-1",
-          "type": "image_picker",
-          "label": "Image"
-        },
-        {
-          "id": "icon-image-2",
-          "type": "image_picker",
-          "label": "Image"
-        },
-        {
-          "id": "icon-image-3",
-          "type": "image_picker",
-          "label": "Image"
-        }
-      ]
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column-usps {
+      width: 100%;
     }
   }
-{% endschema %}}
-    
+</style>
+
+<div class="row-usps">
+  <div class="column-img-usps column-usps">
+    <img src="{{section.settings.icon-image-1 | img_url:'master' }}" width="443px;" height="26px;">
+  </div>
+</div>
+
+<!-- Schema added to the main-product-1.liquid line 97 -->
+{% schema %}
+{
+  "settings": [
+    {
+      "content": "icons",
+      "type": "header"
+    },
+    {
+      "type": "image_picker",
+      "id": "icon-image-1",
+      "label": "Image"
+    }
+  ]
+}
+{% endschema %}
