@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AwakenedCore | Activate Your DNA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+        }
+        
+        .dna-pattern {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M50 0 Q60 20 50 40 Q40 60 50 80 Q60 100 50 100 Q40 100 50 80 Q60 60 50 40 Q40 20 50 0" fill="none" stroke="white" stroke-width="1" opacity="0.2"/></svg>');
+            background-size: 100px;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .benefit-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover .benefit-icon {
+            transform: scale(1.1);
+            color: #000DFF;
+        }
+        
+        .trust-badge {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">AC</div>
+                <span class="text-xl font-bold text-gray-800">AwakenedCore</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-600 hover:text-blue-600 font-medium">Products</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 font-medium">Science</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 font-medium">About</a>
+                <a href="#" class="text-gray-600 hover:text-blue-600 font-medium">Testimonials</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="hidden md:block px-4 py-2 text-gray-600 hover:text-blue-600">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="hidden md:block px-4 py-2 text-gray-600 hover:text-blue-600">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                    Shop Now
+                </button>
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient dna-pattern text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Activate Your DNA</h1>
+            <p class="text-xl md:text-2xl mb-8">YOUR WELL BEING MATTERS.</p>
+            <p class="max-w-2xl mx-auto text-lg mb-10">Premium supplements designed to optimize your genetic potential and unlock peak wellness.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="px-8 py-3 bg-white text-blue-600 font-bold rounded-md hover:bg-gray-100 transition">
+                    Explore Products
+                </button>
+                <button class="px-8 py-3 border-2 border-white text-white font-bold rounded-md hover:bg-white hover:text-blue-600 transition">
+                    Learn The Science
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Indicators -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl text-blue-600 mb-3">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Science-Backed</h3>
+                    <p class="text-gray-600">Research-driven formulations</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl text-blue-600 mb-3">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Premium Quality</h3>
+                    <p class="text-gray-600">Pharmaceutical-grade ingredients</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl text-blue-600 mb-3">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Third-Party Tested</h3>
+                    <p class="text-gray-600">For purity and potency</p>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl text-blue-600 mb-3">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="font-bold mb-2">Made With Care</h3>
+                    <p class="text-gray-600">Ethically sourced and crafted</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Our Core Formulations</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Premium supplements designed to work at the genetic level for optimal wellness.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="relative h-48 bg-gradient-to-r from-blue-500 to-blue-700 flex items-center justify-center">
+                        <div class="absolute top-4 right-4 trust-badge bg-white text-blue-600 rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <img src="https://via.placeholder.com/200x200?text=DNA+Activator" alt="DNA Activator" class="h-40 w-40 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">DNA Activator</h3>
+                        <p class="text-gray-600 mb-4">Supports optimal gene expression and cellular function.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$49.99</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="relative h-48 bg-gradient-to-r from-green-500 to-green-700 flex items-center justify-center">
+                        <div class="absolute top-4 right-4 trust-badge bg-white text-green-600 rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <img src="https://via.placeholder.com/200x200?text=Mitochondrial+Boost" alt="Mitochondrial Boost" class="h-40 w-40 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Mitochondrial Boost</h3>
+                        <p class="text-gray-600 mb-4">Enhances cellular energy production and vitality.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$59.99</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md product-card transition duration-300">
+                    <div class="relative h-48 bg-gradient-to-r from-purple-500 to-purple-700 flex items-center justify-center">
+                        <div class="absolute top-4 right-4 trust-badge bg-white text-purple-600 rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-check"></i>
+                        </div>
+                        <img src="https://via.placeholder.com/200x200?text=Neuro+Clarity" alt="Neuro Clarity" class="h-40 w-40 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl mb-2">Neuro Clarity</h3>
+                        <p class="text-gray-600 mb-4">Supports cognitive function and mental performance.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-lg">$54.99</span>
+                            <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="px-8 py-3 bg-blue-600 text-white font-bold rounded-md hover:bg-blue-700 transition">
+                    View All Products
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wellness Benefits -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl font-bold mb-6">Unlock Your Genetic Potential</h2>
+                    <p class="text-gray-600 mb-8">Our formulations are designed to work at the epigenetic level, supporting your body's natural processes for optimal health and performance.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start benefit-item">
+                            <div class="text-2xl text-blue-600 mr-4 benefit-icon">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">DNA Support</h3>
+                                <p class="text-gray-600">Ingredients that may positively influence gene expression for better health outcomes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start benefit-item">
+                            <div class="text-2xl text-blue-600 mr-4 benefit-icon">
+                                <i class="fas fa-bolt"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">Enhanced Energy</h3>
+                                <p class="text-gray-600">Support mitochondrial function for sustained energy throughout the day.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start benefit-item">
+                            <div class="text-2xl text-blue-600 mr-4 benefit-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-2">Cognitive Clarity</h3>
+                                <p class="text-gray-600">Compounds that support focus, memory, and mental performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <div class="bg-gray-100 rounded-lg overflow-hidden">
+                        <img src="https://via.placeholder.com/600x400?text=Science+of+Wellness" alt="Science of Wellness" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Trusted by Wellness Seekers</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Hear from people who have experienced the AwakenedCore difference.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah J.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"After just one month of DNA Activator, I noticed a significant improvement in my energy levels and overall wellbeing. I'm never going back!"</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Michael T." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Michael T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"The Neuro Clarity formula has been a game-changer for my focus at work. I can power through complex tasks without mental fatigue."</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-gray-300 mr-4 overflow-hidden">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K." class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Priya K.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"I appreciate that AwakenedCore products are backed by real science. The Mitochondrial Boost gives me steady energy without crashes."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Activate Your DNA?</h2>
+            <p class="max-w
