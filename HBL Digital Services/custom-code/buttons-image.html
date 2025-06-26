@@ -44,7 +44,7 @@
     }
     /* Buttons */
     .btn {
-      background-color: #6baf59;
+      background-color: #3A5EA4; /** defaul background color not selected **/
       color: white;
       font-weight: 700;
       padding: 0.55rem 1.25rem;
@@ -62,11 +62,11 @@
     }
     .btn:hover,
     .btn:focus {
-      background-color: #4b7f46;
+      background-color: #91A6D0; /** background-color button selected **/
       outline: none;
     }
     .btn.active {
-      background-color: #4b7f46;
+      background-color: #91A6D0; /** background-color button selected **/
       box-shadow: 0 0 10px #a7d07a75;
     }
     /* Arrow on buttons */
@@ -89,7 +89,6 @@
     }
     .right-column {
       flex: 2 1 480px;
-      border: 3px solid #4b7f46;
       border-radius: 6px;
       overflow: hidden;
     }
@@ -113,11 +112,11 @@
       display: flex;
       align-items: center;
       margin-bottom: 0.6rem;
-      color: #6b7280;
+      color: #6b7280; /** icon text color **/
       font-weight: 500;
     }
     ul li .icon {
-      background-color: #6baf59;
+      background-color: #6baf59; /** icon color **/
       color: white;
       border-radius: 9999px;
       display: inline-flex;
@@ -146,6 +145,21 @@
         display: none;
       }
     }
+    
+     /* styling for the button SEE Services */
+        #smartHomeButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #48A942;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 6px 39%;
+        }
+        #smartHomeButton:hover {
+            background-color: #48A942;
+        }
   </style>
 </head>
 <body>
@@ -170,11 +184,12 @@
       <!-- Right Content -->
       <article class="right-column" aria-live="polite" aria-atomic="true" tabindex="0">
         <!-- Dynamic content will be injected here -->
+        <button id="smartHomeButton">SEE SERVICES</button>
       </article>
     </div>
   </section>
 
-  <script>
+<script>
     const contentData = {
       residential: {
         image: {
@@ -190,6 +205,7 @@
           "We design smart systems that are simple to use, even for the whole family.",
           "Get peace of mind with our easy-to-use smart locks, alarms, and cameras.",
         ],
+        url: "https://google.com", // URL for residential
       },
       commercial: {
         image: {
@@ -205,7 +221,9 @@
           "Advanced surveillance and access control systems.",
           "Ongoing support to keep your technology running smoothly.",
         ],
+        url: "https://example.com/commercial", // URL for commercial
       },
+      
       education: {
         image: {
           src: "https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/af21f413-55e0-4d0b-a6f3-0f527d216a8f.png",
@@ -220,6 +238,7 @@
           "Security systems designed for student and staff safety.",
           "Technology solutions that enable interactive learning.",
         ],
+        url: "https://example.com/commercial", // URL for commercial
       },
       government: {
         image: {
@@ -235,7 +254,9 @@
           "Access management and surveillance tailored for government standards.",
           "Dedicated support with priority response times.",
         ],
+        url: "https://example.com/commercial", // URL for commercial
       },
+      // Add URLs for education and government categories as needed
     };
 
     const buttons = document.querySelectorAll(".btn");
@@ -274,6 +295,14 @@
       if (!contentData[section]) return;
       const data = contentData[section];
       rightColumn.innerHTML = createContentSection(data);
+      
+      // Append the button after the content
+      const buttonHTML = `<button id="smartHomeButton">SEE SERVICES</button>`;
+      rightColumn.innerHTML += buttonHTML; // Append the button to the right column
+
+      // Set the button URL for the selected section
+      setButtonUrl(section);
+      
       rightColumn.focus();
     }
 
@@ -288,7 +317,17 @@
     window.addEventListener("DOMContentLoaded", () => {
       loadSection("residential");
     });
-  </script>
+    
+    // Function to set the button URL based on the selected category
+    function setButtonUrl(category) {
+        const url = contentData[category].url; // Get the URL for the selected category
+        document.getElementById('smartHomeButton').onclick = function() {
+            window.location.href = url; // Redirect to the specified URL
+        };
+    }
+</script>
+
+
 </body>
 </html>
 
